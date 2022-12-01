@@ -37,14 +37,16 @@ export const Features = () => {
   ];
 
   return (
-    <div>
-      {FeatureList.map((feat) => (
-        <div key={feat.id}>
-          <img src={feat.image} alt="Feature Icon" />
-          <h2>{feat.header}</h2>
-          <p>{feat.description}</p>
-        </div>
-      ))}
-    </div>
+    <section id="features">
+      <div>
+        {FeatureList.map((feat) => (
+          <div key={feat.id}>
+            <img src={feat.image} alt="Feature Icon" />
+            <h2>{feat.header}</h2>
+            <p>{feat.description}</p>
+          </div>
+        ))}
+      </div>
+    </section>
   );
 };

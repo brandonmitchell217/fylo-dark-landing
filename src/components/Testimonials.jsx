@@ -38,17 +38,19 @@ export const Testimonials = () => {
   ];
 
   return (
-    <div>
-      {TestimonialList.map((test) => (
-        <div key={test.id}>
-          <p>{test.testimonial}</p>
-          <div>
-            <img src={test.person.image} alt="Author of testimonial" />
-            <h3>{test.person.name}</h3>
-            <p>{test.person.info}</p>
+    <section id="testimonials">
+      <div>
+        {TestimonialList.map((test) => (
+          <div key={test.id}>
+            <p>{test.testimonial}</p>
+            <div>
+              <img src={test.person.image} alt="Author of testimonial" />
+              <h3>{test.person.name}</h3>
+              <p>{test.person.info}</p>
+            </div>
           </div>
-        </div>
-      ))}
-    </div>
+        ))}
+      </div>
+    </section>
   );
 };

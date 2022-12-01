@@ -1,112 +1,117 @@
-:root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 400;
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Raleway:wght@400;700&display=swap");
+@import "./variables.scss";
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
+  position: relative;
+  background-color: $darkBlue2;
+  color: $white;
+  font-family: $body, sans-serif;
+  font-weight: $reg;
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+  section {
+    padding: 3rem 1.5rem;
   }
-  a:hover {
-    color: #747bff;
+
+  img {
+    max-width: 100%;
+    display: block;
   }
-  button {
-    background-color: #f9f9f9;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: $heading, sans-serif;
+    font-weight: $bold;
   }
-}
 
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+  a {
+    text-decoration: none;
+    color: inherit;
   }
-  to {
-    transform: rotate(360deg);
+
+  nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    img {
+      height: 28px;
+    }
+
+    ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+
+      li {
+        a {
+          font-weight: $light;
+          font-size: $bodySize;
+        }
+      }
+    }
   }
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  .App {
+    max-width: 1440px;
+    margin: auto;
   }
-}
 
-.card {
-  padding: 2em;
-}
+  .blueBtn {
+    max-width: 220px;
+    width: 100%;
+    padding: 0.75rem 0;
+    text-align: center;
+    background: linear-gradient(to right, $cyan, $blue);
+    color: $white;
+    font-weight: $bold;
+    font-size: $bodySize;
+    border-radius: 2rem;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+  }
 
-.read-the-docs {
-  color: #888;
+  #landing {
+    padding-top: 6rem;
+    text-align: center;
+
+    .flex-col {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+
+      p {
+        font-weight: $light;
+        font-size: $bodySize;
+        line-height: 150%;
+      }
+
+      .blueBtn {
+        margin-top: 1rem;
+      }
+    }
+    img {
+      max-width: 100%;
+    }
+
+    h1 {
+      line-height: 150%;
+    }
+  }
 }
