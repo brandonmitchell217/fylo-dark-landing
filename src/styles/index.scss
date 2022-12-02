@@ -35,6 +35,12 @@ body {
 
   h2 {
     font-size: 18px;
+    @media (min-width: $lg) {
+      font-size: 30px;
+    }
+    @media (min-width: $xl) {
+      font-size: 36px;
+    }
   }
 
   a {
@@ -60,9 +66,15 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media (min-width: $lg) {
+      padding: 3rem;
+    }
 
     img {
       height: 28px;
+      @media (min-width: $lg) {
+        height: 36px;
+      }
     }
 
     ul {
@@ -113,6 +125,9 @@ body {
         max-width: 600px;
         margin: auto;
       }
+      @media (min-width: $xl) {
+        max-width: 650px;
+      }
 
       p {
         font-weight: $light;
@@ -133,6 +148,13 @@ body {
 
     h1 {
       line-height: $regLH;
+
+      @media (min-width: $lg) {
+        font-size: 34px;
+      }
+      @media (min-width: $xl) {
+        font-size: 38px;
+      }
     }
   }
 
@@ -166,6 +188,10 @@ body {
 
   // Section CTA
   #cta {
+    p {
+      font-size: $bodySize;
+    }
+
     .flex-col {
       gap: 1rem;
       @media (min-width: $lg) {
@@ -174,13 +200,21 @@ body {
     }
     .flex-col.bottomRight {
       @media (min-width: $lg) {
-        padding: 0 1rem;
+        padding: 0 3rem;
+        width: 50%;
         flex-direction: column;
         align-items: flex-start;
       }
+      h2 {
+        @media (min-width: $lg) {
+          max-width: 18ch;
+        }
+      }
     }
-    p {
-      font-size: $bodySize;
+    .flex-col.topLeft {
+      @media (min-width: $lg) {
+        width: 50%;
+      }
     }
 
     .ctaBtn {
@@ -250,16 +284,7 @@ body {
   // Section Suscribe
   #suscribe {
     position: relative;
-
-    .darkBlueBG {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      z-index: -1;
-      width: 100%;
-      height: 45%;
-      background-color: $darkBlue3;
-    }
+    z-index: 2;
 
     .flex-col {
       max-width: 800px;
@@ -300,6 +325,7 @@ body {
       }
 
       button {
+        padding: 1rem;
         outline: none;
         border: none;
       }
@@ -309,6 +335,7 @@ body {
   // Footer
   footer {
     position: relative;
+    z-index: 9;
     padding: 1rem 1.5rem 3rem;
     display: flex;
     flex-direction: column;
@@ -325,7 +352,7 @@ body {
       flex-direction: row;
       justify-content: space-between;
       align-items: flex-start;
-      padding-top: 6rem;
+      padding: 6rem 3rem 3rem;
       gap: 0;
     }
 
@@ -415,6 +442,22 @@ body {
           width: auto;
         }
       }
+    }
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    width: 100%;
+    height: 22%;
+    background-color: $darkBlue3;
+    @media (min-width: $md) {
+      height: 18%;
+    }
+    @media (min-width: $lg) {
+      height: 400px;
     }
   }
   //End Body

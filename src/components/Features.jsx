@@ -42,7 +42,7 @@ export const Features = () => {
         {FeatureList.map((feat) => (
           <div className="flex-col feat" key={feat.id}>
             <img src={feat.image} alt="Feature Icon" />
-            <h2>{feat.header}</h2>
+            <h3>{feat.header}</h3>
             <p>{feat.description}</p>
           </div>
         ))}
