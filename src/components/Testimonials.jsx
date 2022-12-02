@@ -8,7 +8,7 @@ export const Testimonials = () => {
     {
       id: 1,
       testimonial:
-        "Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled machine.",
+        "Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.",
       person: {
         image: Img1,
         name: "Satish Patel",
@@ -18,7 +18,7 @@ export const Testimonials = () => {
     {
       id: 2,
       testimonial:
-        "Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled machine.",
+        "Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.",
       person: {
         image: Img2,
         name: "Bruce McKenzie",
@@ -28,7 +28,7 @@ export const Testimonials = () => {
     {
       id: 3,
       testimonial:
-        "Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled machine.",
+        "Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.",
       person: {
         image: Img3,
         name: "Iva Boyd",
@@ -39,14 +39,18 @@ export const Testimonials = () => {
 
   return (
     <section id="testimonials">
-      <div>
+      <div className="flex-col">
         {TestimonialList.map((test) => (
-          <div key={test.id}>
+          <div className="testimonial" key={test.id}>
             <p>{test.testimonial}</p>
-            <div>
-              <img src={test.person.image} alt="Author of testimonial" />
-              <h3>{test.person.name}</h3>
-              <p>{test.person.info}</p>
+            <div className="author">
+              <div className="image">
+                <img src={test.person.image} alt="Author of testimonial" />
+              </div>
+              <div className="info">
+                <h3>{test.person.name}</h3>
+                <p>{test.person.info}</p>
+              </div>
             </div>
           </div>
         ))}

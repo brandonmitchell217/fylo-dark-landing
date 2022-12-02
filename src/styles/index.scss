@@ -41,6 +41,10 @@ body {
     text-decoration: none;
     color: inherit;
   }
+  a,
+  button {
+    cursor: pointer;
+  }
 
   nav {
     position: absolute;
@@ -147,7 +151,6 @@ body {
       }
     }
   }
-  // End Body
 
   // Section CTA
   #cta {
@@ -164,14 +167,93 @@ body {
       display: flex;
       justify-content: center;
       align-items: center;
-
       font-size: $bodySize;
       color: $cyan;
       border-bottom: 1px solid $cyan;
+
       span {
         margin-top: 4px;
         padding: 0 0.5rem;
       }
     }
   }
+
+  // Section Testimonials
+  #testimonials {
+    .flex-col {
+      gap: 2rem;
+    }
+    .testimonial {
+      padding: 1.5rem;
+      background-color: $darkBlue4;
+      border-radius: 4px;
+
+      p {
+        font-size: 12px;
+        line-height: $regLH;
+      }
+
+      .author {
+        margin-top: 1rem;
+        display: flex;
+        align-items: center;
+
+        .image {
+          flex: 0.25;
+          img {
+            border-radius: 50%;
+          }
+        }
+        .info {
+          padding-left: 0.5rem;
+
+          h3 {
+            font-size: 1rem;
+          }
+          p {
+            padding-top: 2px;
+            font-size: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  // Section Suscribe
+  #suscribe {
+    .flex-col {
+      padding: 3rem 1rem;
+      background-color: $darkBlue1;
+      gap: 1rem;
+      border-radius: 12px;
+    }
+
+    p {
+      text-align: center;
+      font-size: $bodySize;
+      line-height: $regLH;
+    }
+
+    form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+
+      input {
+        width: 100%;
+        padding: 1rem;
+        border-radius: 2rem;
+      }
+
+      button {
+        outline: none;
+        border: none;
+      }
+    }
+  }
+
+  //End Body
 }
