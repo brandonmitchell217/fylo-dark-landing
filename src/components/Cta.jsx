@@ -5,7 +5,7 @@ import { BsFillArrowRightCircleFill } from "react-icons/bs";
 export const Cta = () => {
   return (
     <section id="cta">
-      <div>
+      <div className="flex-col">
         <img
           src={Illustration}
           alt="Illustration of productive collaboration"
@@ -19,7 +19,7 @@ export const Cta = () => {
           Securely share files and folders with friends, family and colleagues
           for live collaboration. No email attachments required.
         </p>
-        <a href="/">
+        <a href="/" className="ctaBtn">
           See how Fylo works
           <span>
             <BsFillArrowRightCircleFill />

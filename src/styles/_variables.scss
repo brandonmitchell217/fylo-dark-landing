@@ -1,6 +1,7 @@
 $heading: "Raleway";
 $body: "Open Sans";
 $bodySize: 14px;
+$regLH: 150%;
 $light: 300;
 $reg: 400;
 $bold: 700;
@@ -21,3 +22,9 @@ $red: hsl(0, 100%, 63%);
 
 // Neutral Colors
 $white: hsl(0, 0%, 100%);
+
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;

@@ -15,7 +15,7 @@ body {
   font-weight: $reg;
 
   section {
-    padding: 3rem 1.5rem;
+    padding: 6rem 1.5rem 3rem;
   }
 
   img {
@@ -31,6 +31,10 @@ body {
   h6 {
     font-family: $heading, sans-serif;
     font-weight: $bold;
+  }
+
+  h2 {
+    font-size: 18px;
   }
 
   a {
@@ -67,6 +71,13 @@ body {
     }
   }
 
+  .flex-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
   .App {
     max-width: 1440px;
     margin: auto;
@@ -85,21 +96,17 @@ body {
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
   }
 
+  // Section Landing
   #landing {
-    padding-top: 6rem;
     text-align: center;
 
     .flex-col {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
       gap: 1rem;
 
       p {
         font-weight: $light;
         font-size: $bodySize;
-        line-height: 150%;
+        line-height: $regLH;
       }
 
       .blueBtn {
@@ -111,7 +118,60 @@ body {
     }
 
     h1 {
-      line-height: 150%;
+      line-height: $regLH;
+    }
+  }
+
+  // Section Features
+  #features {
+    .flex-split {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 5rem;
+      text-align: center;
+      @media (min-width: $lg) {
+        flex-direction: row;
+        gap: 1rem;
+      }
+    }
+    .feat {
+      max-width: 320px;
+      width: 100%;
+
+      line-height: $regLH;
+      gap: 1rem;
+
+      p {
+        font-size: $bodySize;
+      }
+    }
+  }
+  // End Body
+
+  // Section CTA
+  #cta {
+    .flex-col {
+      gap: 1rem;
+    }
+    p {
+      font-size: $bodySize;
+    }
+
+    .ctaBtn {
+      padding-bottom: 0.25rem;
+      align-self: flex-start;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      font-size: $bodySize;
+      color: $cyan;
+      border-bottom: 1px solid $cyan;
+      span {
+        margin-top: 4px;
+        padding: 0 0.5rem;
+      }
     }
   }
 }
