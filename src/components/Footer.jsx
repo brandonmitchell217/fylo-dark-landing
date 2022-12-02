@@ -10,17 +10,21 @@ export const Footer = () => {
   return (
     <footer>
       <div className="flex-col company">
-        <a href="/">
-          <img src={Logo} alt="Fylo Logo" />
-        </a>
-        <p className="iconCont">
-          <span>
-            <ImLocation />
-          </span>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe odio
-          consectetur repellendus reiciendis praesentium voluptate repudiandae
-          adipisci estas
-        </p>
+        <div className="logo">
+          <a href="/">
+            <img src={Logo} alt="Fylo Logo" />
+          </a>
+        </div>
+        <div className="flex-col statement">
+          <p className="iconCont">
+            <span>
+              <ImLocation />
+            </span>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe odio
+            consectetur repellendus reiciendis praesentium voluptate repudiandae
+            adipisci estas
+          </p>
+        </div>
       </div>
       <div className="flex-col contact">
         <a href="/" className="iconCont">
