@@ -3,6 +3,7 @@ import React from "react";
 export const Suscribe = () => {
   return (
     <section id="suscribe">
+      <div className="darkBlueBG"></div>
       <div className="flex-col">
         <h2>Get early access today</h2>
         <p>

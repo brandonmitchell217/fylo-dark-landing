@@ -1,18 +1,19 @@
 import React from "react";
 import Logo from "../assets/logo.svg";
 
-import { BsFacebook, BsTwitter, BsInstagram } from "react-icons/bs";
+import { BsTwitter, BsInstagram } from "react-icons/bs";
+import { FaFacebookF } from "react-icons/fa";
 import { ImLocation } from "react-icons/im";
 import { MdPhoneInTalk, MdEmail } from "react-icons/md";
 
 export const Footer = () => {
   return (
     <footer>
-      <div>
+      <div className="flex-col company">
         <a href="/">
           <img src={Logo} alt="Fylo Logo" />
         </a>
-        <p>
+        <p className="iconCont">
           <span>
             <ImLocation />
           </span>
@@ -21,21 +22,21 @@ export const Footer = () => {
           adipisci estas
         </p>
       </div>
-      <div>
-        <a href="/">
+      <div className="flex-col contact">
+        <a href="/" className="iconCont">
           <span>
             <MdPhoneInTalk />
           </span>
           +1-543-123-4567
         </a>
-        <a href="/">
+        <a href="/" className="iconCont">
           <span>
             <MdEmail />
           </span>
           example@fylo.com
         </a>
       </div>
-      <div>
+      <div className="flex-col footerNav">
         <ul>
           <li>
             <a href="/">About Us</a>
@@ -62,9 +63,9 @@ export const Footer = () => {
           </li>
         </ul>
       </div>
-      <div>
+      <div className="social">
         <a href="/">
-          <BsFacebook />
+          <FaFacebookF />
         </a>
         <a href="/">
           <BsTwitter />
