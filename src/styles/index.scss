@@ -109,11 +109,18 @@ body {
 
     .flex-col {
       gap: 1rem;
+      @media (min-width: $lg) {
+        max-width: 600px;
+        margin: auto;
+      }
 
       p {
         font-weight: $light;
         font-size: $bodySize;
         line-height: $regLH;
+        @media (min-width: $lg) {
+          padding: 0 5rem;
+        }
       }
 
       .blueBtn {
@@ -131,21 +138,23 @@ body {
 
   // Section Features
   #features {
-    .flex-split {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+    .featGrid {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
       gap: 5rem;
-      text-align: center;
+      place-items: center;
       @media (min-width: $lg) {
-        flex-direction: row;
-        gap: 1rem;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 3rem;
       }
     }
-    .feat {
+    .flex-col.feat {
       max-width: 320px;
       width: 100%;
 
+      text-align: center;
       line-height: $regLH;
       gap: 1rem;
 
@@ -159,6 +168,16 @@ body {
   #cta {
     .flex-col {
       gap: 1rem;
+      @media (min-width: $lg) {
+        flex-direction: row;
+      }
+    }
+    .flex-col.bottomRight {
+      @media (min-width: $lg) {
+        padding: 0 1rem;
+        flex-direction: column;
+        align-items: flex-start;
+      }
     }
     p {
       font-size: $bodySize;
@@ -185,8 +204,13 @@ body {
   #testimonials {
     .flex-col {
       gap: 2rem;
+      @media (min-width: $lg) {
+        flex-direction: row;
+      }
     }
     .testimonial {
+      max-width: 375px;
+      width: 100%;
       padding: 1.5rem;
       background-color: $darkBlue4;
       border-radius: 4px;
@@ -202,7 +226,8 @@ body {
         align-items: center;
 
         .image {
-          flex: 0.25;
+          max-width: 38px;
+
           img {
             border-radius: 50%;
           }
@@ -237,10 +262,15 @@ body {
     }
 
     .flex-col {
+      max-width: 800px;
+      margin: auto;
       padding: 3rem 1rem;
       background-color: $darkBlue1;
       gap: 1rem;
       border-radius: 12px;
+      @media (min-width: $lg) {
+        padding: 3rem;
+      }
     }
 
     p {
@@ -257,6 +287,10 @@ body {
       justify-content: center;
       align-items: center;
       gap: 1rem;
+
+      @media (min-width: $lg) {
+        flex-direction: row;
+      }
 
       input {
         width: 100%;
@@ -278,6 +312,15 @@ body {
     gap: 1rem;
     font-size: $bodySize;
     background-color: $darkBlue3;
+    @media (min-width: $lg) {
+      padding: 1rem 3rem 3rem;
+      // flex-direction: row;
+      // justify-content: space-between;
+      // align-items: flex-end;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: 1fr;
+    }
 
     .iconCont {
       display: flex;
@@ -295,18 +338,31 @@ body {
       gap: 1rem;
       .iconCont {
         margin-top: 1rem;
+        @media (min-width: $lg) {
+          margin: 0;
+        }
       }
     }
 
     .contact {
       align-items: flex-start;
       gap: 1rem;
+      @media (min-width: $lg) {
+        padding-top: 2rem;
+        place-self: center;
+      }
     }
 
     .footerNav {
       padding: 3rem 0;
       align-items: flex-start;
       gap: 2rem;
+      @media (min-width: $lg) {
+        // padding-top: 2rem;
+        padding: 0;
+        flex-direction: row;
+        place-self: end center;
+      }
 
       ul {
         display: flex;
@@ -321,7 +377,11 @@ body {
       justify-content: center;
       align-items: center;
       gap: 1rem;
-
+      @media (min-width: $lg) {
+        padding-top: 2rem;
+        place-self: center;
+        padding-bottom: 3rem;
+      }
       a {
         padding: 8px 8px 4px;
         border: 1px solid $white;

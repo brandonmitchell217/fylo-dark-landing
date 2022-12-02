@@ -38,7 +38,7 @@ export const Features = () => {
 
   return (
     <section id="features">
-      <div className="flex-split">
+      <div className="featGrid">
         {FeatureList.map((feat) => (
           <div className="flex-col feat" key={feat.id}>
             <img src={feat.image} alt="Feature Icon" />
