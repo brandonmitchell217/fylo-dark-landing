@@ -1,11 +1,14 @@
 import React from "react";
-import Logo from "../assets/logo.svg";
+// import Logo from "../assets/logo.svg";
+import Logo from "../assets/svg/Logo";
 export const Nav = () => {
   return (
     <nav>
-      <a href="/">
-        <img src={Logo} alt="Fylo Logo" />
-      </a>
+      <div className="logo">
+        <a href="/">
+          <Logo />
+        </a>
+      </div>
       <ul>
         <li>
           <a href="/">Features</a>

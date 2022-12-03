@@ -38,14 +38,16 @@ export const Features = () => {
 
   return (
     <section id="features">
-      <div className="featGrid">
-        {FeatureList.map((feat) => (
-          <div className="flex-col feat" key={feat.id}>
-            <img src={feat.image} alt="Feature Icon" />
-            <h3>{feat.header}</h3>
-            <p>{feat.description}</p>
-          </div>
-        ))}
+      <div className="wrapper">
+        <div className="featGrid">
+          {FeatureList.map((feat) => (
+            <div className="flex-col feat" key={feat.id}>
+              <img src={feat.image} alt="Feature Icon" />
+              <h3>{feat.header}</h3>
+              <p>{feat.description}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

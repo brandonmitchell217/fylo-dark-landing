@@ -1,5 +1,6 @@
 import React from "react";
-import Logo from "../assets/logo.svg";
+// import Logo from "../assets/logo.svg";
+import Logo from "../assets/svg/Logo";
 
 import { BsTwitter, BsInstagram } from "react-icons/bs";
 import { FaFacebookF } from "react-icons/fa";
@@ -12,7 +13,7 @@ export const Footer = () => {
       <div className="flex-col company">
         <div className="logo">
           <a href="/">
-            <img src={Logo} alt="Fylo Logo" />
+            <Logo />
           </a>
         </div>
         <div className="flex-col statement">

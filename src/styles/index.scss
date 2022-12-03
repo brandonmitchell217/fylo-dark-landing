@@ -9,13 +9,25 @@
 
 body {
   position: relative;
-  background-color: $darkBlue2;
+  background-color: $darkBlue1;
   color: $white;
   font-family: $body, sans-serif;
   font-weight: $reg;
 
   section {
+    position: relative;
+
     padding: 6rem 1.5rem 3rem;
+    .wrapper {
+      max-width: 1440px;
+      margin: auto;
+    }
+  }
+
+  #features,
+  #cta,
+  #testimonials {
+    background-color: $darkBlue2;
   }
 
   img {
@@ -70,10 +82,14 @@ body {
       padding: 3rem;
     }
 
-    img {
-      height: 28px;
+    .logo {
+      height: 30px;
       @media (min-width: $lg) {
-        height: 36px;
+        height: 40px;
+      }
+
+      svg {
+        height: 100%;
       }
     }
 
@@ -98,8 +114,6 @@ body {
   }
 
   .App {
-    max-width: 1440px;
-    margin: auto;
   }
 
   .blueBtn {
@@ -117,7 +131,25 @@ body {
 
   // Section Landing
   #landing {
+    position: relative;
     text-align: center;
+
+    .outer {
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+
+      svg {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        height: auto;
+        max-width: 100%;
+      }
+    }
 
     .flex-col {
       gap: 1rem;
@@ -357,13 +389,14 @@ body {
     }
 
     .logo {
-      margin-bottom: 1rem;
-
+      height: 50px;
       @media (min-width: $lg) {
         position: absolute;
         top: 1.5rem;
-        left: 1.5rem;
-        margin-bottom: 0;
+        left: 3rem;
+      }
+      svg {
+        height: 100%;
       }
     }
 
@@ -443,6 +476,15 @@ body {
         }
       }
     }
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    background-color: $darkBlue2;
   }
   &::after {
     content: "";

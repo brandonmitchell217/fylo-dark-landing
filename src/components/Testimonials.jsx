@@ -39,21 +39,23 @@ export const Testimonials = () => {
 
   return (
     <section id="testimonials">
-      <div className="flex-col">
-        {TestimonialList.map((test) => (
-          <div className="testimonial" key={test.id}>
-            <p>{test.testimonial}</p>
-            <div className="author">
-              <div className="image">
-                <img src={test.person.image} alt="Author of testimonial" />
-              </div>
-              <div className="info">
-                <h3>{test.person.name}</h3>
-                <p>{test.person.info}</p>
+      <div className="wrapper">
+        <div className="flex-col">
+          {TestimonialList.map((test) => (
+            <div className="testimonial" key={test.id}>
+              <p>{test.testimonial}</p>
+              <div className="author">
+                <div className="image">
+                  <img src={test.person.image} alt="Author of testimonial" />
+                </div>
+                <div className="info">
+                  <h3>{test.person.name}</h3>
+                  <p>{test.person.info}</p>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );

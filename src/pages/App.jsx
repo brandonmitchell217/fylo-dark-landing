@@ -5,6 +5,7 @@ import { Features } from "../components/Features";
 import { Landing } from "../components/Landing";
 import { Testimonials } from "../components/Testimonials";
 import { Suscribe } from "../components/Suscribe";
+import BgCurvyDesktop from "../assets/svg/Bg-curvy-desktop";
 
 function App() {
   return (
