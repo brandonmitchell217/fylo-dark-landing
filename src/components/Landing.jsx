@@ -1,8 +1,10 @@
 import React from "react";
 import Illustration from "../assets/illustration-intro.png";
 import BgCurvyDesktop from "../assets/svg/Bg-curvy-desktop";
-
+import BgCurvyMobile from "../assets/svg/Bg-curvy-mobile";
+import useSizing from "../hooks/useSizing";
 export const Landing = () => {
+  const isMobile = useSizing() <= 768 ? true : false;
   return (
     <section id="landing">
       <div className="wrapper">
@@ -20,7 +22,7 @@ export const Landing = () => {
         </div>
       </div>
       <div className="outer">
-        <BgCurvyDesktop />
+        {isMobile ? <BgCurvyMobile /> : <BgCurvyDesktop />}
       </div>
     </section>
   );
