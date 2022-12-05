@@ -11,13 +11,19 @@ export const Nav = () => {
       </div>
       <ul>
         <li>
-          <a href="/">Features</a>
+          <a href="/" onClick={(e) => e.preventDefault()}>
+            Features
+          </a>
         </li>
         <li>
-          <a href="/">Team</a>
+          <a href="/" onClick={(e) => e.preventDefault()}>
+            Team
+          </a>
         </li>
         <li>
-          <a href="/">Sign In</a>
+          <a href="/" onClick={(e) => e.preventDefault()}>
+            Sign In
+          </a>
         </li>
       </ul>
     </nav>

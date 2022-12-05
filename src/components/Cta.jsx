@@ -1,6 +1,9 @@
 import React from "react";
 import Illustration from "../assets/illustration-stay-productive.png";
 import { BsFillArrowRightCircleFill } from "react-icons/bs";
+import Lottie from "lottie-react";
+import workingWoman from "../assets/busy-working-woman.json";
+import ctaAni from "../assets/cta-ani.json";
 
 export const Cta = () => {
   return (
@@ -8,9 +11,10 @@ export const Cta = () => {
       <div className="wrapper">
         <div className="flex-col">
           <div className="topLeft">
-            <img
-              src={Illustration}
-              alt="Illustration of productive collaboration"
+            <Lottie
+              animationData={ctaAni}
+              loop={true}
+              style={{ maxWidth: "550px" }}
             />
           </div>
           <div className="flex-col bottomRight">
@@ -23,7 +27,7 @@ export const Cta = () => {
               Securely share files and folders with friends, family and
               colleagues for live collaboration. No email attachments required.
             </p>
-            <a href="/" className="ctaBtn">
+            <a href="/" className="ctaBtn" onClick={(e) => e.preventDefault()}>
               See how Fylo works
               <span>
                 <BsFillArrowRightCircleFill />

@@ -11,7 +11,7 @@ export const Suscribe = () => {
             extremely generous. If you have any questions, our support team
             would be happy to help you.
           </p>
-          <form>
+          <form onSubmit={(e) => e.preventDefault()}>
             <input name="email" type="text" placeholder="email@example.com" />
             <button type="submit" className="blueBtn">
               Get Started For Free

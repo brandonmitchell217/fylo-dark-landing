@@ -28,13 +28,13 @@ export const Footer = () => {
         </div>
       </div>
       <div className="flex-col contact">
-        <a href="/" className="iconCont">
+        <a href="/" className="iconCont" onClick={(e) => e.preventDefault()}>
           <span>
             <MdPhoneInTalk />
           </span>
           +1-543-123-4567
         </a>
-        <a href="/" className="iconCont">
+        <a href="/" className="iconCont" onClick={(e) => e.preventDefault()}>
           <span>
             <MdEmail />
           </span>
@@ -44,38 +44,52 @@ export const Footer = () => {
       <div className="flex-col footerNav">
         <ul>
           <li>
-            <a href="/">About Us</a>
+            <a href="/" onClick={(e) => e.preventDefault()}>
+              About Us
+            </a>
           </li>
           <li>
-            <a href="/">Jobs</a>
+            <a href="/" onClick={(e) => e.preventDefault()}>
+              Jobs
+            </a>
           </li>
           <li>
-            <a href="/">Press</a>
+            <a href="/" onClick={(e) => e.preventDefault()}>
+              Press
+            </a>
           </li>
           <li>
-            <a href="/">Blog</a>
+            <a href="/" onClick={(e) => e.preventDefault()}>
+              Blog
+            </a>
           </li>
         </ul>
         <ul>
           <li>
-            <a href="/">Contact Us</a>
+            <a href="/" onClick={(e) => e.preventDefault()}>
+              Contact Us
+            </a>
           </li>
           <li>
-            <a href="/">Terms</a>
+            <a href="/" onClick={(e) => e.preventDefault()}>
+              Terms
+            </a>
           </li>
           <li>
-            <a href="/">Privacy</a>
+            <a href="/" onClick={(e) => e.preventDefault()}>
+              Privacy
+            </a>
           </li>
         </ul>
       </div>
       <div className="social">
-        <a href="/">
+        <a href="/" onClick={(e) => e.preventDefault()}>
           <FaFacebookF />
         </a>
-        <a href="/">
+        <a href="/" onClick={(e) => e.preventDefault()}>
           <BsTwitter />
         </a>
-        <a href="/">
+        <a href="/" onClick={(e) => e.preventDefault()}>
           <BsInstagram />
         </a>
       </div>

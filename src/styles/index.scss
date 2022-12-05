@@ -131,10 +131,11 @@ body {
 
   // Section Landing
   #landing {
+    padding-top: 0;
     position: relative;
     text-align: center;
 
-    .outer {
+    .shapeBG {
       width: 100%;
       position: absolute;
       bottom: 0;
@@ -159,6 +160,7 @@ body {
       }
       @media (min-width: $xl) {
         max-width: 650px;
+        gap: 0;
       }
 
       p {
@@ -173,9 +175,6 @@ body {
       .blueBtn {
         margin-top: 1rem;
       }
-    }
-    img {
-      max-width: 100%;
     }
 
     h1 {
@@ -220,6 +219,9 @@ body {
 
   // Section CTA
   #cta {
+    @media (min-width: $lg) {
+      padding: 8rem 1.5rem 6rem;
+    }
     p {
       font-size: $bodySize;
     }
@@ -232,8 +234,9 @@ body {
     }
     .flex-col.bottomRight {
       @media (min-width: $lg) {
-        padding: 0 3rem;
-        width: 50%;
+        padding: 0 1.5rem;
+        // width: 50%;
+        flex: 0.5;
         flex-direction: column;
         align-items: flex-start;
       }
@@ -245,7 +248,8 @@ body {
     }
     .flex-col.topLeft {
       @media (min-width: $lg) {
-        width: 50%;
+        // width: 50%;
+        flex: 0.5;
       }
     }
 
