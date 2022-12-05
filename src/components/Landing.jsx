@@ -11,7 +11,6 @@ export const Landing = () => {
     <section id="landing">
       <div className="wrapper">
         <div className="flex-col">
-          {/* <img src={Illustration} alt="Illustration of an office" /> */}
           <Lottie
             animationData={illustrationAnimation}
             loop={true}
