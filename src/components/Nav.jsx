@@ -1,5 +1,4 @@
 import React from "react";
-// import Logo from "../assets/logo.svg";
 import Logo from "../assets/svg/Logo";
 export const Nav = () => {
   return (

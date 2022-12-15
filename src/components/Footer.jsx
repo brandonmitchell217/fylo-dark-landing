@@ -1,7 +1,5 @@
 import React from "react";
-// import Logo from "../assets/logo.svg";
 import Logo from "../assets/svg/Logo";
-
 import { BsTwitter, BsInstagram } from "react-icons/bs";
 import { FaFacebookF } from "react-icons/fa";
 import { ImLocation } from "react-icons/im";
