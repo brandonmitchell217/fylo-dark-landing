@@ -1,8 +1,8 @@
 import React from "react";
 
-export const Suscribe = () => {
+export const Subscribe = () => {
   return (
-    <section id="suscribe">
+    <section id="subscribe">
       <div className="wrapper">
         <div className="flex-col">
           <h2>Get early access today</h2>

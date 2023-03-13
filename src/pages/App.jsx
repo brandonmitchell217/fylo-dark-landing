@@ -3,7 +3,7 @@ import { Cta } from "../components/Cta";
 import { Features } from "../components/Features";
 import { Landing } from "../components/Landing";
 import { Testimonials } from "../components/Testimonials";
-import { Suscribe } from "../components/Suscribe";
+import { Subscribe } from "../components/Subscribe";
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
       <Features />
       <Cta />
       <Testimonials />
-      <Suscribe />
+      <Subscribe />
     </div>
   );
 }
