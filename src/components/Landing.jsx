@@ -11,12 +11,8 @@ export const Landing = () => {
     <section id="landing">
       <div className="wrapper">
         <div className="flex-col">
-          <Lottie
-            animationData={illustrationAnimation}
-            loop={true}
-            style={{ height: "550px" }}
-          />
-          <div>
+          <Lottie animationData={illustrationAnimation} loop={true} />
+          <div className="text">
             <h1>All your files in one secure location, accessible anywhere.</h1>
             <p>
               Fylo stores all your most important files in one secure location.

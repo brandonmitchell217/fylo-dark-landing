@@ -128,9 +128,12 @@ body {
 
   // Section Landing
   #landing {
-    padding-top: 0;
     position: relative;
     text-align: center;
+
+    @media (min-width: $lg) {
+      padding-top: 0;
+    }
 
     .shapeBG {
       width: 100%;
