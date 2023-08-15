@@ -11,7 +11,11 @@ export const Landing = () => {
     <section id="landing">
       <div className="wrapper">
         <div className="flex-col">
-          <Lottie animationData={illustrationAnimation} loop={true} />
+          <Lottie
+            animationData={illustrationAnimation}
+            loop={true}
+            className="scale-dwn"
+          />
           <div className="text">
             <h1>All your files in one secure location, accessible anywhere.</h1>
             <p>

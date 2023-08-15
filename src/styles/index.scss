@@ -24,6 +24,14 @@ body {
     }
   }
 
+  .scale-dwn {
+    transform: scale(0.8);
+
+    @media (min-width: $lg) {
+      transform: scale(1);
+    }
+  }
+
   #features,
   #cta,
   #testimonials {
