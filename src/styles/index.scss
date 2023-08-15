@@ -150,14 +150,12 @@ body {
     }
 
     .flex-col {
-      gap: 1rem;
       @media (min-width: $lg) {
         max-width: 600px;
         margin: auto;
       }
       @media (min-width: $xl) {
         max-width: 650px;
-        gap: 0;
       }
 
       p {
